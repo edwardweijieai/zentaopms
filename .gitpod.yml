@@ -8,5 +8,9 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'gp init'' # runs during prebuild
-    command: git config --global alias.co checkout && git config --global alias.st status && git config --global alias.br branch && composer install
+  - name: gp init
+    init: >
+     composer install
+    command: >
+      git config --global alias.co checkout && git config --global alias.st status && git config --global alias.br branch;
+      apachectl start;
