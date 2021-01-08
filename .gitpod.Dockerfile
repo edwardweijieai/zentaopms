@@ -2,6 +2,8 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+COPY /build/debian/zentaopms.conf /etc/apache2/zentaopms.conf
+
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #

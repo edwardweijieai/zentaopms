@@ -1,0 +1,14 @@
+# system cron.
+#min   hour day month week  command.
+0      1    *   *     *     /workspace/zentaopms/bin/dailyreminder.sh   # dailyreminder.
+1      1    *   *     *     /workspace/zentaopms/bin/backup.sh          # backup database and file.
+1      23   *   *     *     /workspace/zentaopms/bin/computeburn.sh     # compute burndown chart.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/syncsvn.sh         # sync subversion.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/syncgit.sh         # sync git.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/sendmail.sh        # async send mail.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/sendwebhook.sh     # async send webhook.
+1      1    *   *     *     /workspace/zentaopms/bin/createcycle.sh     # create cycle todo.
+30     1    *   *     *     /workspace/zentaopms/bin/deletelog.sh       # delete log.
+1      0    *   *     *     /workspace/zentaopms/bin/initqueue.sh       # init queue.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/checkbuildstatus.sh   # check build status.
+1-59/5 *    *   *     *     /workspace/zentaopms/bin/execcompile.sh        # execute compile.
