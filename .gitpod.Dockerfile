@@ -18,7 +18,7 @@ RUN wget http://xdebug.org/files/xdebug-2.9.1.tgz \
 
 COPY ./build/debian/zentaopms.conf /etc/apache2/zentaopms.conf
 
-RUN apt install mariadb mariadb-server
+# RUN apt install mariadb mariadb-server
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
